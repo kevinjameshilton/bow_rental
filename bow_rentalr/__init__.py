@@ -26,7 +26,10 @@ def create_app(test_config=None):
     # a simple page that says hello
     @app.route('/hello')
     def hello():
-        return 'Hello, World!'
+        import datetime
+        return f'Site contents Copyright © {datetime.datetime.now().year}'\
+               ' Erika\'s Bow Rental unless noted otherwise.'\
+               ' All rights reserved.'
 
     return app
 
